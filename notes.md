@@ -10,3 +10,5 @@ can't use class, will have to use className
 [Introduction to PropTypes](https://learn.tylermcginnis.com/courses/50507/lectures/2466607)
 
 inline styling use double {{}}
+
+## Component drilling - having state inside app.js file 
