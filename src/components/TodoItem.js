@@ -17,12 +17,23 @@ markComplete = (e) => {
   render() {
     //destructing the props 
     const {id, title} = this.props.todo;
+    const btnStyle = {
+      cursor:'pointer',
+      background:'#ff0000',
+      border:'none',
+      float: 'right',
+      borderRadius:'50%',
+      padding: '4px 8px',
+      color: '#fff',
+    }
+
     return (
       <div style={this.getStyle()}>
         <p>
           <input type="checkbox" onChange={this.props.markComplete.bind (this, id)} />
           {''}
         {title}</p>
+        <button onClick={this.props.delTodo.bind(this,id)} style={btnStyle}>X</button>
       </div>
     )
   }
