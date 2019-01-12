@@ -6,7 +6,6 @@ function Header () {
             <h1> Mona's ToDo List </h1>
         </header>
     )
-
 }
 
 const headerStyle = {
