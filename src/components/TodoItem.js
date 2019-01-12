@@ -17,17 +17,7 @@ markComplete = (e) => {
   render() {
     //destructing the props 
     const {id, title} = this.props.todo;
-    const btnStyle = {
-      cursor:'pointer',
-      background:'#ff0000',
-      border:'none',
-      float: 'right',
-      borderRadius:'50%',
-      padding: '4px 8px',
-      color: '#fff',
-    }
-
-    return (
+        return (
       <div style={this.getStyle()}>
         <p>
           <input type="checkbox" onChange={this.props.markComplete.bind (this, id)} />
@@ -42,6 +32,15 @@ markComplete = (e) => {
 TodoItem.propTypes ={
   todo: PropTypes.object.isRequired
 }
-
+//btn inline style 
+const btnStyle = {
+  background:'#ff0000',
+  color: '#fff',
+  border: 'none',
+  padding: '5px 8px',
+  borderRadius:'50%',
+  cursor:'pointer',   
+  float: 'right'
+}
 
 export default TodoItem;

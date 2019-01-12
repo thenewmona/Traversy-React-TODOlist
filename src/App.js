@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Todos from './components/Todos'
+import './components/layouts/Header'
 
 class App extends Component {
   state = {
@@ -24,7 +25,7 @@ class App extends Component {
 ]
   }
 
-//toggle complete 
+//mark complete 
   markComplete = (id) => {
     this.setState({todos: this.state.todos.map(todo => {
       if(todo.id === id){
@@ -45,6 +46,7 @@ class App extends Component {
   render() {   
     return (
       <div className="App">
+      <header />
       {/* Creating a prop */}
        <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
       </div>
